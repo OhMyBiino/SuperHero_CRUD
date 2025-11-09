@@ -1,8 +1,21 @@
-<ul *ngFor="let hero of heroes; index as i">
-    <li>{{hero.id}}</li>
-    <li>{{hero.name}}</li>
-    <li>{{hero.firstName}}</li>
-    <li>{{hero.lastName}}</li>
-    <li>{{hero.location}}</li>
-</ul>
+<table class="table-auto">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let hero of heroes;">
+            <td>{{hero.id}}</td>
+            <td>{{hero.name}}</td>
+            <td>{{hero.firstName}}</td>
+            <td>{{hero.lastName}}</td>
+            <td>{{hero.location}}</td>
+        </tr>
+    </tbody>
+</table>
 <router-outlet/>
