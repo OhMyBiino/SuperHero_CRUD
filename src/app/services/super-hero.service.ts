@@ -10,13 +10,24 @@ export class SuperHeroService {
 
   public getSuperHeroes(): SuperHero[]
   {
-    let hero = new SuperHero();
-    hero.id = 1;
-    hero.name = "SpiderMan";
-    hero.firstName = "Peter";
-    hero.lastName = "Parker";
-    hero.location = "Transville Homes"
+    let hero: SuperHero[] = [
+      {
+         id:1,
+        name: "SpiderMan",
+        firstName :"Peter",
+        lastName :"Parker",
+        location :"Transville Homes"
+      },
+      { 
+        id :1,
+        name :"BatMan",
+        firstName :"Bruce",
+        lastName : "Willis",
+        location :"Lynville Homes"
+      }
+    ];
     
-    return [hero]
+    
+    return hero
   }
 }
