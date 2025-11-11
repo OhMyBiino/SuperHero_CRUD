@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'SuperHero_CRUD';
+
   heroes:SuperHero[] = [];
 
   constructor(private superHeroService:SuperHeroService){}
