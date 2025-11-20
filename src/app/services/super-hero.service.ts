@@ -12,6 +12,7 @@ export class SuperHeroService {
 
   public getSuperHeroes() : Observable<SuperHero[]>
   {
+    console.log("getting SuperHeroes");
     return this.http.get<SuperHero[]>('http://localhost:5150/api/SuperHero');
   }
 }
