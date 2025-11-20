@@ -10,25 +10,8 @@ export class SuperHeroService {
   
   constructor(private http:HttpClient) { }
 
-  public getSuperHeroes(): SuperHero[]
+  public getSuperHeroes() : Observable<SuperHero[]>
   {
-    let hero: SuperHero[] = [
-      {
-         id:1,
-        name: "SpiderMan",
-        firstName :"Peter",
-        lastName :"Parker",
-        location :"Transville Homes"
-      },
-      { 
-        id :1,
-        name :"BatMan",
-        firstName :"Bruce",
-        lastName : "Willis",
-        location :"Lynville Homes"
-      }
-    ];
-    
-    return hero
+    return this.http.get<SuperHero[]>('http://localhost:5150/api/SuperHero');
   }
 }

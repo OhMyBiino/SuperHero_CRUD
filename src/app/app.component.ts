@@ -20,7 +20,11 @@ export class AppComponent {
 
   ngOnInit() : void
   {
-    this.heroes = this.superHeroService.getSuperHeroes();
+    this.superHeroService
+      .getSuperHeroes()
+      .subscribe(result => {
+       this.heroes = result;
+      });
     console.log(this.heroes)
   }
 }
