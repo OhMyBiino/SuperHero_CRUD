@@ -20,6 +20,5 @@ export class SuperheroTabComponent {
     .getSuperHeroes()
     .subscribe(result => { this.superHeroes = result });
     console.log(this.superHeroes)
-    console.log("hey");
   }
 }
